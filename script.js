@@ -462,23 +462,22 @@ class DigitalClock {
         oscillator.connect(gainNode);
         gainNode.connect(audioContext.destination);
 
-        oscillator.frequency.setValueAtTime(900, audioContext.currentTime);
+        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
         oscillator.type = "sine";
 
-        gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(
           0.01,
-          audioContext.currentTime + 5.5
+          audioContext.currentTime + 0.5
         );
 
         oscillator.start(audioContext.currentTime);
-        oscillator.stop(audioContext.currentTime + 5.5);
+        oscillator.stop(audioContext.currentTime + 0.5);
       };
 
       // Play multiple beeps
       playBeep();
       setTimeout(playBeep, 600);
-      setTimeout(playBeep, 1000);
       setTimeout(playBeep, 1200);
     } catch (error) {
       console.warn("Could not play alarm sound:", error);
@@ -546,3 +545,4 @@ class DigitalClock {
 document.addEventListener("DOMContentLoaded", () => {
   window.digitalClock = new DigitalClock();
 });
+
