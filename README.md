@@ -138,6 +138,10 @@ Fully responsive design with:
 - Semantic HTML structure
 - ARIA labels and roles
 
+## 🔗 Live Preview
+
+https://m-hamid-zia.github.io/Pluse-Professional-Digital-Clock/
+
 ## 📄 License
 
 MIT License - feel free to use this project for personal or commercial purposes.
